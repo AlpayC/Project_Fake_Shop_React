@@ -10,7 +10,7 @@ function App() {
   return (
     <>
       <BrowserRouter
-        basename={import.meta.env.DEV ? "/" : "/react-vite-gh-pages/"}
+        basename={import.meta.env.DEV ? "/" : "/Project_Fake_Shop_React/"}
       >
         <Routes>
           <Route path="/" element={<Home />} />
