@@ -1,3 +1,16 @@
+@font-face {
+  font-family: rische;
+  src: url("../Rische-demo.otf");
+}
+@font-face {
+  font-family: universal;
+  src: url("../Universal.otf");
+}
+@font-face {
+  font-family: Choco;
+  src: url("../TTChocolates-tl.otf");
+}
+
 .product-container {
   display: flex;
   flex-direction: row;
@@ -10,8 +23,56 @@
 }
 .product-detail-container {
   display: flex;
-  justify-content: center;
+  justify-content: first baseline;
   align-items: center;
   flex-direction: column;
   max-width: 40vw;
+  background-color: #e0edf4;
+  padding: 5rem;
+  height: 80vh;
+  gap: 2rem;
+}
+.product-detail-container h1 {
+  font-size: 5rem;
+}
+.product-detail-container h3 {
+  font-size: 2rem;
+  font-family: Choco;
+}
+.product-rating-container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-evenly;
+  gap: 10rem;
+  margin-bottom: 2rem;
+}
+i {
+  color: rgb(255, 211, 36);
+  font-size: 3rem;
+}
+.btn-container {
+  display: flex;
+  gap: 4rem;
+  padding: 5rem;
+}
+.quantity-container {
+  display: flex;
+  gap: 2rem;
+  padding: 1rem;
+  align-items: center;
+}
+.quantity-container input {
+  border: none;
+  border-radius: 2rem;
+  transition: all ease-in-out 250ms;
+  font-size: 3rem;
+  font-weight: 900;
+  padding: 1rem 0rem;
+  text-align: center;
+}
+.quantity-container input:hover {
+  border: 2px solid #87cef4;
+}
+.product-detail-container h2 {
+  font-size: 6rem;
 }

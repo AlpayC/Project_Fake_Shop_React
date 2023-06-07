@@ -1,8 +1,21 @@
+@font-face {
+  font-family: rische;
+  src: url("./Rische-demo.otf");
+}
+@font-face {
+  font-family: universal;
+  src: url("./Universal.otf");
+}
+@font-face {
+  font-family: Choco;
+  src: url("./TTChocolates-tl.otf");
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: Choco;
 }
 
 html {
@@ -10,16 +23,21 @@ html {
 }
 
 h1 {
-  font-size: 5rem;
+  font-family: choco;
+  font-size: 15rem;
+  font-weight: 200;
 }
 h2 {
+  font-family: rische;
   font-size: 4rem;
 }
 h3 {
+  font-family: Universal;
   font-size: 3rem;
+  letter-spacing: -1px;
 }
 body {
-  padding: 5rem;
+  padding: 0 5rem 5rem 5rem;
 }
 img {
   max-width: 100%;
@@ -31,92 +49,4 @@ a {
 }
 p {
   font-size: 2rem;
-}
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 2rem;
-}
-.shop-item {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  transition: all ease-in 250ms;
-  border-radius: 2px;
-  overflow: hidden;
-}
-.shop-item img {
-  max-width: 200px;
-  min-width: 200px;
-  max-height: 200px;
-  min-height: 200px;
-  padding: 3rem;
-  background-color: white;
-  border-radius: 1rem;
-  object-fit: contain;
-}
-
-.shop-item:hover {
-  transform: scale(1.05);
-}
-.header-container {
-  height: 50vh;
-  width: 100%;
-  background-color: #e0edf4;
-  display: flex;
-}
-.header-divider-one {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: flex-start;
-  flex-direction: column;
-  height: 90%;
-  padding: 10rem;
-  width: 50%;
-}
-.header-divider-two {
-  background: url("./sale.jpg") center no-repeat;
-  background-size: cover;
-  opacity: 0.3;
-  filter: blur(5px);
-  width: 50%;
-  height: 100%;
-  transition: all ease-in 250ms;
-  border-top-left-radius: 2rem;
-  border-bottom-left-radius: 2rem;
-  cursor: pointer;
-}
-.header-divider-two:hover {
-  filter: blur(0px);
-}
-.about-us-container {
-  height: 40vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-
-  text-align: center;
-  line-height: 4rem;
-  margin: 10rem 0;
-}
-.about-us-container p {
-  margin: 0 20rem;
-}
-.our-products {
-  text-align: center;
-  background-color: #e0edf4;
-}
-.products-title {
-  font-weight: 700;
-  font-size: 2rem;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  max-width: 90%;
-}
-.sale-price {
-  color: red;
-  text-decoration: line-through;
 }

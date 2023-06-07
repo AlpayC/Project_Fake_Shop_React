@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import "./Nav.css";
 import { useEffect, useState } from "react";
 
@@ -31,21 +31,40 @@ const Nav = () => {
     setTranslatedCategories(translated);
   };
   return (
-    <nav>
-      <NavLink to="/">Home</NavLink>
-      {superData ? (
-        <>
-          {superData.map((category, index) => (
-            <NavLink key={index} to={`/category/${category}`}>
-              {translatedCategories[index]}
-            </NavLink>
-          ))}
-        </>
-      ) : (
-        <p>Daten werden geladen ...</p>
-      )}
-      <NavLink to="/cart">Warenkorb</NavLink>
-    </nav>
+    <>
+      <section className="benefits-container">
+        <div className="benefit-one">
+          <p>Kostenlose Lieferung ab 50€</p>
+        </div>
+        <div className="benefit-two">
+          <p>Mindestens 40% auf alles</p>
+        </div>
+        <div className="benefit-three">
+          <p>Kostenlose Retouren</p>
+        </div>
+      </section>
+      <nav>
+        <Link>
+          <h2>SuperSales</h2>
+        </Link>
+        <section className="menu-items-container">
+          <NavLink to="/">Home</NavLink>
+          {superData ? (
+            <section className="menu-items">
+              {superData.map((category, index) => (
+                <NavLink key={index} to={`/category/${category}`}>
+                  {translatedCategories[index]}
+                </NavLink>
+              ))}
+            </section>
+          ) : (
+            <p>Daten werden geladen ...</p>
+          )}{" "}
+        </section>
+
+        <NavLink to="/cart">Warenkorb</NavLink>
+      </nav>
+    </>
   );
 };
 

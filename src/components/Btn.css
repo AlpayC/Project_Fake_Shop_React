@@ -6,4 +6,12 @@
   cursor: pointer;
   font-size: 2rem;
   border: none;
+  transition: all ease-in 150ms;
+  font-family: Choco;
+}
+
+.btn:hover {
+  background-color: #87cef4;
+  color: black;
+  font-weight: 800;
 }

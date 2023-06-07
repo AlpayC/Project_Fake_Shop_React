@@ -16,14 +16,28 @@ const Home = () => {
         console.log("Fehler beim laden", error);
       });
   }, []);
+
+  const renderStars = (rating) => {
+    const stars = [];
+
+    for (let i = 1; i <= 5; i++) {
+      if (i <= rating) {
+        stars.push(<i className="fas fa-star" key={i}></i>);
+      } else {
+        stars.push(<i className="far fa-star" key={i}></i>);
+      }
+    }
+
+    return stars;
+  };
   return (
     <section>
       <Nav />
       <header>
         <section className="header-container">
           <div className="header-divider-one">
+            <h3>JEDEN TAG SALES</h3>
             <h1>Nice Deals</h1>
-            <h3>Hier findest du die besten Deals</h3>
             <Link to="./allproducts">
               <Btn name="Shop Now"></Btn>
             </Link>
@@ -58,6 +72,9 @@ const Home = () => {
                   <Link to={`/product/${products.id}`}>
                     <img src={products.image} alt={products.title}></img>
                   </Link>
+                  <p className="stars-home">
+                    {renderStars(products.rating.rate)}
+                  </p>
                   <p className="products-title">{products.title}</p>
                   <p className="products-price">
                     {products.price} €

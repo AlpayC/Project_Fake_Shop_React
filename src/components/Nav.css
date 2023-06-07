@@ -1,7 +1,47 @@
 nav {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  gap: 5rem;
+  padding: 0 2rem 2rem 2rem;
+  background-color: transparent;
+  transition: all ease-in-out 250ms;
+}
+nav:hover {
+  background-color: #e0edf4;
+}
+nav a {
+  color: black;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  transition: all ease-in-out 250ms;
+}
+nav a:hover {
+  background-color: #141717;
+  color: #e0edf4;
+}
+.active {
+  background-color: #141717;
+  color: #e0edf4;
+}
+.menu-items-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 2rem;
-  padding: 2rem;
+}
+.menu-items {
+  display: flex;
+  gap: 2rem;
+}
+nav h2 {
+  font-size: 5rem;
+}
+.benefits-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #e0edf4;
+  margin: 0 -5rem;
+  padding: 1rem 5rem;
 }

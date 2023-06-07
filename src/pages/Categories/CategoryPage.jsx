@@ -2,6 +2,7 @@ import Nav from "../../components/Nav";
 import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
+import "./CategoryPage.css";
 
 const CategoryPage = () => {
   const idParams = useParams();
@@ -24,6 +25,21 @@ const CategoryPage = () => {
   const detailProducts = isLoading
     ? []
     : superData.filter((elm) => elm.category.toString() === idParams.category);
+
+  const renderStars = (rating) => {
+    const stars = [];
+
+    for (let i = 1; i <= 5; i++) {
+      if (i <= rating) {
+        stars.push(<i className="fas fa-star" key={i}></i>);
+      } else {
+        stars.push(<i className="far fa-star" key={i}></i>);
+      }
+    }
+
+    return stars;
+  };
+
   return (
     <>
       <Nav />
@@ -39,6 +55,9 @@ const CategoryPage = () => {
                   <Link to={`/product/${products.id}`}>
                     <img src={products.image} alt={products.title} />
                   </Link>
+                  <p className="stars-home">
+                    {renderStars(products.rating.rate)}
+                  </p>
                   <p>{products.title}</p>
                   <p>{products.price} €</p>
                 </div>

@@ -1,6 +1,15 @@
+@font-face {
+  font-family: rische;
+  src: url("../Rische-demo.otf");
+}
+
+h1 {
+  font-size: 15rem;
+  font-weight: 200;
+}
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
 }
 .shop-item {
@@ -27,7 +36,7 @@
   transform: scale(1.05);
 }
 .header-container {
-  height: 50vh;
+  height: 70vh;
   width: 100%;
   background-color: #e0edf4;
   display: flex;
@@ -85,4 +94,17 @@
 .sale-price {
   color: red;
   text-decoration: line-through;
+}
+.our-products {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 5rem;
+  padding: 5rem;
+}
+.stars-home {
+  display: flex;
+  gap: 0.5rem;
+  padding: 1rem;
 }
