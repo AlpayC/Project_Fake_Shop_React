@@ -9,7 +9,9 @@ import AllProducts from "./pages/All_Products/AllProducts";
 function App() {
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter
+        basename={import.meta.env.DEV ? "/" : "/react-vite-gh-pages/"}
+      >
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/allproducts" element={<AllProducts />} />
